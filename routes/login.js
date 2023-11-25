@@ -6,7 +6,7 @@ require('dotenv/config')
 
 const Usuario = require('../models/usuario')
 
-route.post("/login", async (req,res) => {
+route.post("/validar", async (req,res) => {
     const { email, senha } = req.body
 
     if(!email)
@@ -41,7 +41,7 @@ route.post("/login", async (req,res) => {
 
 })
 
-route.post("/register", async (req,res) => {
+route.post("/registrar", async (req,res) => {
     const { email, senha } = req.body
 
     if(!email)
@@ -52,8 +52,7 @@ route.post("/register", async (req,res) => {
 
     var usuario = await Usuario.create({ email, senha })
     return res.send( usuario )
-
 })
 
 
-module.exports = app => app.use("/api", route)
+module.exports = app => app.use("/login", route)

@@ -4,11 +4,11 @@ const { Schema } = mongoose
 
 const Compras = new Schema({
     id_cliente: {
-        type: Number,
+        type: String,
         rquired: true
     },
     id_produto: {
-        type: Number,
+        type: String,
         rquired: true
     },
     quantidade: Number,
