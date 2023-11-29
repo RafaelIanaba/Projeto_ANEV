@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "Prova_02",
-    "dateExported": "2023-11-29T14:22:26.342Z",
+    "dateExported": "2023-11-29T14:57:43.496Z",
     "version": "1.1",
     "folders": [
         {
@@ -475,7 +475,7 @@
             "method": "GET",
             "sortNum": 200000,
             "created": "2023-11-13T20:01:58.074Z",
-            "modified": "2023-11-29T14:11:18.105Z",
+            "modified": "2023-11-29T14:44:26.220Z",
             "headers": [],
             "params": [],
             "body": {

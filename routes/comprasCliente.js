@@ -17,9 +17,12 @@ route.get("/", async (req,res) => {
     var { id_cliente } = req.body
 
     if (!id_cliente)
-        return res.send({ error: "Id do cliente não pode ser nulo"})
+        return res.send({ error: "Id do cliente não pode ser nulo."})
 
-    var data = await Compras.find({id_cliente});
+    var data = await Compras.find({id_cliente: id_cliente});
+
+    if (data.length === 0)
+        return res.send({ error: "Esse id não pertence a nenhum cliente que realizou alguma compra."})
     
     return res.send( data );   
 })
@@ -30,7 +33,7 @@ route.put("/", async (req,res) => {
     var { id, id_cliente, id_produto, quantidade, valor_total, data, ativo } = req.body
 
     if (id == undefined)
-        return res.send({ error: "Id não pode ser nulo"})
+        return res.send({ error: "Id não pode ser nulo."})
 
     if (ativo == false) {
         try {
@@ -39,7 +42,7 @@ route.put("/", async (req,res) => {
             return res.send( {mensagem: "Compra alterada com sucesso."} )
         }  
         catch( err ) {
-            return res.send({ error: "Id não encontrado" })
+            return res.send({ error: "Id não encontrado." })
         }
     }
 })
@@ -50,7 +53,7 @@ route.delete("/", async (req,res) => {
     var {id} = req.body
 
     if (id == undefined)
-        return res.send({ error: "Id não pode ser nulo"})
+        return res.send({ error: "Id não pode ser nulo."})
 
 
     try {
@@ -59,7 +62,7 @@ route.delete("/", async (req,res) => {
         return res.send( {mensagem: "Compra deletada com sucesso."} )
     }  
     catch( err ) {
-        return res.send({ error: "Id não encontrado" })
+        return res.send({ error: "Id não encontrado." })
     }
 })
 

@@ -6,6 +6,9 @@ require('dotenv/config')
 
 const Usuario = require('../models/usuario')
 
+/************************************************************************************************************* */
+
+
 route.post("/validar", async (req,res) => {
     const { email, senha } = req.body
 
@@ -41,6 +44,9 @@ route.post("/validar", async (req,res) => {
 
 })
 
+/************************************************************************************************************* */
+
+
 route.post("/registrar", async (req,res) => {
     const { email, senha } = req.body
 
@@ -50,8 +56,14 @@ route.post("/registrar", async (req,res) => {
     if(!senha)
         return res.send({ msg: "Campo senha é obrigatório"})
 
-    var usuario = await Usuario.create({ email, senha })
-    return res.send( usuario )
+    var data = await Usuario.find({email: email});
+
+    if (data.length === 0) {
+        var usuario = await Usuario.create({ email, senha })
+        return res.send( usuario )
+    } else {
+        return res.send({ error: "Esse usuário já foi inserido." });   
+    }
 })
 
 
