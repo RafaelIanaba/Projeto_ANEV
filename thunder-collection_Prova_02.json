@@ -1,0 +1,527 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Prova_02",
+    "dateExported": "2023-11-29T14:22:26.342Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "1d33bbe1-69a6-4d44-80c5-0880134b2b5a",
+            "name": "Produtos",
+            "containerId": "",
+            "created": "2023-11-08T17:21:30.237Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "437d1d5d-b901-472a-beb4-da22fbd037a3",
+            "name": "Clientes",
+            "containerId": "",
+            "created": "2023-11-08T17:24:06.131Z",
+            "sortNum": 30000
+        },
+        {
+            "_id": "2e442a27-48d5-4cda-88ec-96b05618804c",
+            "name": "Categorias",
+            "containerId": "",
+            "created": "2023-11-08T17:25:08.769Z",
+            "sortNum": 40000
+        },
+        {
+            "_id": "8a570e41-91a0-49ed-af78-560564a2575e",
+            "name": "Compras",
+            "containerId": "",
+            "created": "2023-11-08T17:31:05.203Z",
+            "sortNum": 50000
+        },
+        {
+            "_id": "33c08910-70a6-4ca0-9943-e533da483abc",
+            "name": "Login",
+            "containerId": "",
+            "created": "2023-11-08T17:32:37.685Z",
+            "sortNum": 60000
+        },
+        {
+            "_id": "74ff48f6-dc12-4045-a0a0-99796e8555bc",
+            "name": "ProdutosLista",
+            "containerId": "",
+            "created": "2023-11-13T18:42:09.745Z",
+            "sortNum": 70000
+        },
+        {
+            "_id": "42527d68-96b5-4388-a4d4-0e6a2e492088",
+            "name": "ComprasCliente",
+            "containerId": "",
+            "created": "2023-11-13T19:29:51.788Z",
+            "sortNum": 80000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "cb3311dc-1ca3-496f-8204-72741f3fed54",
+            "colId": "15c7cad5-41e9-4c2a-b785-de15d9981c25",
+            "containerId": "1d33bbe1-69a6-4d44-80c5-0880134b2b5a",
+            "name": "Incluir",
+            "url": "127.0.0.1:3001/produtos",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-11-08T17:22:27.320Z",
+            "modified": "2023-11-29T13:56:50.151Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": ""
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nome\": \"escova\",\n  \"categoria\": \"bons tratos\",\n  \"valor\": 10.00,\n  \"peso\": 0.10,\n  \"data_validade\": \"não é um produto alimentício\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "efddd68e-aea3-4fc9-9fe5-efc709fe7aaa",
+            "colId": "15c7cad5-41e9-4c2a-b785-de15d9981c25",
+            "containerId": "74ff48f6-dc12-4045-a0a0-99796e8555bc",
+            "name": "Listar",
+            "url": "127.0.0.1:3001/produtosLista",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-11-08T17:23:06.833Z",
+            "modified": "2023-11-13T18:42:30.277Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "aa4f37ab-08c9-491a-87d4-81b0ff9b287a",
+            "colId": "15c7cad5-41e9-4c2a-b785-de15d9981c25",
+            "containerId": "42527d68-96b5-4388-a4d4-0e6a2e492088",
+            "name": "Incluir",
+            "url": "127.0.0.1:3001/comprasCliente",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-11-08T17:31:12.757Z",
+            "modified": "2023-11-29T13:59:23.064Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id_cliente\": \"65673f882b05cbf07cb47616\",\n  \"id_produto\": \"656742f823cbe82dc9324978\",\n  \"quantidade\": 3,\n  \"valor_total\": 30,\n  \"data\": \"01/01/01\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "21b6d76a-2120-48bf-b8ea-546c35b66d41",
+            "colId": "15c7cad5-41e9-4c2a-b785-de15d9981c25",
+            "containerId": "1d33bbe1-69a6-4d44-80c5-0880134b2b5a",
+            "name": "Alterar",
+            "url": "127.0.0.1:3001/produtos",
+            "method": "PUT",
+            "sortNum": 20000,
+            "created": "2023-11-08T17:22:58.166Z",
+            "modified": "2023-11-29T13:56:34.629Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": ""
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id\": \"6552675d0072942806c87598\",\n  \"nome\": \"escova\",\n  \"categoria\": \"bons tratos\",\n  \"valor\": 10.50,\n  \"peso\": 0.10,\n  \"data_validade\": \"não é um produto alimentício\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "7f082368-7745-4727-af5a-085ce3c871df",
+            "colId": "15c7cad5-41e9-4c2a-b785-de15d9981c25",
+            "containerId": "1d33bbe1-69a6-4d44-80c5-0880134b2b5a",
+            "name": "Excluir",
+            "url": "127.0.0.1:3001/produtos",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2023-11-08T17:23:14.516Z",
+            "modified": "2023-11-29T13:56:28.510Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": ""
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id\": \"6562447e0bea9e7ace3afde8\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "f2b0f657-b43e-4e4f-8472-269259a0ef9d",
+            "colId": "15c7cad5-41e9-4c2a-b785-de15d9981c25",
+            "containerId": "437d1d5d-b901-472a-beb4-da22fbd037a3",
+            "name": "Incluir",
+            "url": "127.0.0.1:3001/clientes",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2023-11-08T17:24:17.037Z",
+            "modified": "2023-11-29T13:43:39.547Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": ""
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nome\": \"Rafael Ianaba\",\n  \"email\": \"rafael@gmail.com\",\n  \"telefone\": \"(14)11234-5623\",\n  \"cpf\": \"11111111111\",\n  \"endereço\": \"Uruguai 1-11\",\n  \"idade\": 20 \n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "3fabbf54-0f54-4391-9dcf-b48d102dac76",
+            "colId": "15c7cad5-41e9-4c2a-b785-de15d9981c25",
+            "containerId": "1d33bbe1-69a6-4d44-80c5-0880134b2b5a",
+            "name": "Listar",
+            "url": "127.0.0.1:3001/produtos",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2023-11-13T18:43:34.651Z",
+            "modified": "2023-11-29T13:57:52.847Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NjczZWI4NmIwNjBlODg0OGIzMjUwZiIsImVtYWlsIjoiaWFuYWJhcmFmYTFAaG90bWFpbC5jb20iLCJpYXQiOjE3MDEyNjYxMzIsImV4cCI6MTcwMTMyNjEzMn0.K6ZMZJAEjiB_4YQXnFgJ4Q4a3jNamDt1kHfABrKZxC0"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "38553bfa-7aba-4335-bddb-6fd8a5416bcd",
+            "colId": "15c7cad5-41e9-4c2a-b785-de15d9981c25",
+            "containerId": "437d1d5d-b901-472a-beb4-da22fbd037a3",
+            "name": "Alterar",
+            "url": "127.0.0.1:3001/clientes",
+            "method": "PUT",
+            "sortNum": 60000,
+            "created": "2023-11-08T17:24:24.191Z",
+            "modified": "2023-11-29T13:54:48.456Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": ""
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id\": \"65673f882b05cbf07cb47616\",\n  \"nome\": \"Rafael Garcia Ianaba\",\n  \"email\": \"rafael@gmail.com\",\n  \"telefone\": \"(14)11234-5623\",\n  \"cpf\": \"11111111111\",\n  \"endereço\": \"Rua Uruguai 2-00 Jardim Terra Branca Bauru SP\",\n  \"idade\": 20 \n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "6e0f1bb3-8667-4f25-8c8d-70e6336adf90",
+            "colId": "15c7cad5-41e9-4c2a-b785-de15d9981c25",
+            "containerId": "437d1d5d-b901-472a-beb4-da22fbd037a3",
+            "name": "Listar",
+            "url": "127.0.0.1:3001/clientes",
+            "method": "GET",
+            "sortNum": 70000,
+            "created": "2023-11-08T17:24:42.696Z",
+            "modified": "2023-11-29T13:58:17.060Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NjczZWI4NmIwNjBlODg0OGIzMjUwZiIsImVtYWlsIjoiaWFuYWJhcmFmYTFAaG90bWFpbC5jb20iLCJpYXQiOjE3MDEyNjYxMzIsImV4cCI6MTcwMTMyNjEzMn0.K6ZMZJAEjiB_4YQXnFgJ4Q4a3jNamDt1kHfABrKZxC0"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "af7bf0f5-f0f3-4c2f-a5e2-480e1f83984f",
+            "colId": "15c7cad5-41e9-4c2a-b785-de15d9981c25",
+            "containerId": "437d1d5d-b901-472a-beb4-da22fbd037a3",
+            "name": "Excluir",
+            "url": "127.0.0.1:3001/clientes",
+            "method": "DELETE",
+            "sortNum": 80000,
+            "created": "2023-11-08T17:24:50.013Z",
+            "modified": "2023-11-29T13:43:17.986Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": ""
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id\": \"65624506ec3372a9633af8b9\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "5e3dcb64-f37c-4de2-92db-6263956e311c",
+            "colId": "15c7cad5-41e9-4c2a-b785-de15d9981c25",
+            "containerId": "2e442a27-48d5-4cda-88ec-96b05618804c",
+            "name": "Incluir",
+            "url": "127.0.0.1:3001/categorias",
+            "method": "POST",
+            "sortNum": 90000,
+            "created": "2023-11-08T17:25:17.253Z",
+            "modified": "2023-11-29T13:46:14.855Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": ""
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nome\": \"bons tratos\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "8ba5fb41-bdac-4f37-9e58-18ee3564068d",
+            "colId": "15c7cad5-41e9-4c2a-b785-de15d9981c25",
+            "containerId": "2e442a27-48d5-4cda-88ec-96b05618804c",
+            "name": "Alterar",
+            "url": "127.0.0.1:3001/categorias",
+            "method": "PUT",
+            "sortNum": 100000,
+            "created": "2023-11-08T17:25:24.079Z",
+            "modified": "2023-11-29T13:46:17.390Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": ""
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id\": \"65525ce53cf087096d41e120\",\n  \"nome\": \"recriação\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "90c7f85a-f5be-4270-92df-0f22443a135a",
+            "colId": "15c7cad5-41e9-4c2a-b785-de15d9981c25",
+            "containerId": "2e442a27-48d5-4cda-88ec-96b05618804c",
+            "name": "Listar",
+            "url": "127.0.0.1:3001/categorias",
+            "method": "GET",
+            "sortNum": 110000,
+            "created": "2023-11-08T17:27:02.749Z",
+            "modified": "2023-11-29T13:46:19.533Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": ""
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "ef67e8d1-0268-41da-bea9-f80f3050767a",
+            "colId": "15c7cad5-41e9-4c2a-b785-de15d9981c25",
+            "containerId": "2e442a27-48d5-4cda-88ec-96b05618804c",
+            "name": "Excluir",
+            "url": "127.0.0.1:3001/categorias",
+            "method": "DELETE",
+            "sortNum": 120000,
+            "created": "2023-11-08T17:27:36.693Z",
+            "modified": "2023-11-29T13:46:36.323Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": ""
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id\": \"65624559ec3372a9633af8bf\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "27764b4b-3d63-4390-be2d-e4b9944db25b",
+            "colId": "15c7cad5-41e9-4c2a-b785-de15d9981c25",
+            "containerId": "8a570e41-91a0-49ed-af78-560564a2575e",
+            "name": "Alterar",
+            "url": "127.0.0.1:3001/compras",
+            "method": "PUT",
+            "sortNum": 150000,
+            "created": "2023-11-08T17:31:25.217Z",
+            "modified": "2023-11-25T19:11:13.704Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NjI0NDY0MGJlYTllN2FjZTNhZmRlNSIsImVtYWlsIjoiaWFuYWJhcmFmYTFAaG90bWFpbC5jb20iLCJpYXQiOjE3MDA5Mzg4NTUsImV4cCI6MTcwMDk5ODg1NX0.IUSFCo-l3RGIoos49KT_raS3QmhPOzf6HQAKd4U85ys"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id\": \"65527e4fb4b4a852f81c3e06\",\n  \"id_cliente\": 1,\n  \"id_produto\": 1,\n  \"quantidade\": 1,\n  \"valor_total\": 10.50,\n  \"data\": \"não é um produto alimentício\",\n  \"ativo\": true\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "6cffdaa2-2b11-4ec4-8a29-a39fb9ca117b",
+            "colId": "15c7cad5-41e9-4c2a-b785-de15d9981c25",
+            "containerId": "8a570e41-91a0-49ed-af78-560564a2575e",
+            "name": "Listar",
+            "url": "127.0.0.1:3001/compras",
+            "method": "GET",
+            "sortNum": 160000,
+            "created": "2023-11-08T17:31:31.752Z",
+            "modified": "2023-11-29T14:06:24.117Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NjczZWI4NmIwNjBlODg0OGIzMjUwZiIsImVtYWlsIjoiaWFuYWJhcmFmYTFAaG90bWFpbC5jb20iLCJpYXQiOjE3MDEyNjYxMzIsImV4cCI6MTcwMTMyNjEzMn0.K6ZMZJAEjiB_4YQXnFgJ4Q4a3jNamDt1kHfABrKZxC0"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "ebc5baab-09a0-4974-b905-bcd6d46b1a17",
+            "colId": "15c7cad5-41e9-4c2a-b785-de15d9981c25",
+            "containerId": "8a570e41-91a0-49ed-af78-560564a2575e",
+            "name": "Excluir",
+            "url": "127.0.0.1:3001/compras",
+            "method": "DELETE",
+            "sortNum": 170000,
+            "created": "2023-11-08T17:31:41.298Z",
+            "modified": "2023-11-25T19:06:42.108Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NjI0NDY0MGJlYTllN2FjZTNhZmRlNSIsImVtYWlsIjoiaWFuYWJhcmFmYTFAaG90bWFpbC5jb20iLCJpYXQiOjE3MDA5Mzg4NTUsImV4cCI6MTcwMDk5ODg1NX0.IUSFCo-l3RGIoos49KT_raS3QmhPOzf6HQAKd4U85ys"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id\": \"\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "43d3140b-39cd-445d-b734-a01eae27d7c0",
+            "colId": "15c7cad5-41e9-4c2a-b785-de15d9981c25",
+            "containerId": "33c08910-70a6-4ca0-9943-e533da483abc",
+            "name": "Validar",
+            "url": "127.0.0.1:3001/login/validar",
+            "method": "POST",
+            "sortNum": 180000,
+            "created": "2023-11-08T17:33:00.232Z",
+            "modified": "2023-11-25T18:05:26.824Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\": \"ianabarafa1@hotmail.com\",\n  \"senha\": \"123456\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "a73ebc31-11d4-4e2c-abed-9a0e21813eff",
+            "colId": "15c7cad5-41e9-4c2a-b785-de15d9981c25",
+            "containerId": "33c08910-70a6-4ca0-9943-e533da483abc",
+            "name": "Registrar",
+            "url": "127.0.0.1:3001/login/registrar",
+            "method": "POST",
+            "sortNum": 190000,
+            "created": "2023-11-08T17:33:10.083Z",
+            "modified": "2023-11-25T18:05:00.981Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\": \"ianabarafa1@hotmail.com\",\n  \"senha\": \"123456\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "dfc9f009-5933-4971-bf4e-58aa8c59db34",
+            "colId": "15c7cad5-41e9-4c2a-b785-de15d9981c25",
+            "containerId": "42527d68-96b5-4388-a4d4-0e6a2e492088",
+            "name": "Listar",
+            "url": "127.0.0.1:3001/comprasCliente",
+            "method": "GET",
+            "sortNum": 200000,
+            "created": "2023-11-13T20:01:58.074Z",
+            "modified": "2023-11-29T14:11:18.105Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id_cliente\": \"65673f882b05cbf07cb47616\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "fb215766-a731-4a61-9e4a-63d705aa4327",
+            "colId": "15c7cad5-41e9-4c2a-b785-de15d9981c25",
+            "containerId": "42527d68-96b5-4388-a4d4-0e6a2e492088",
+            "name": "Alterar",
+            "url": "127.0.0.1:3001/comprasCliente",
+            "method": "PUT",
+            "sortNum": 210000,
+            "created": "2023-11-13T20:08:18.112Z",
+            "modified": "2023-11-29T14:19:35.233Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id\": \"656743ba23cbe82dc932497e\",\n  \"id_cliente\": \"65673f882b05cbf07cb47616\",\n  \"id_produto\": \"656742f823cbe82dc9324978\",\n  \"quantidade\": 1,\n  \"valor_total\": 10.50,\n  \"data\": \"não é um produto alimentício\",\n  \"ativo\": false\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "38bff527-0709-45fd-9bfd-a0ad39be628a",
+            "colId": "15c7cad5-41e9-4c2a-b785-de15d9981c25",
+            "containerId": "42527d68-96b5-4388-a4d4-0e6a2e492088",
+            "name": "Excluir",
+            "url": "127.0.0.1:3001/comprasCliente",
+            "method": "DELETE",
+            "sortNum": 220000,
+            "created": "2023-11-13T20:12:42.319Z",
+            "modified": "2023-11-29T14:21:39.791Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id\": \"\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}

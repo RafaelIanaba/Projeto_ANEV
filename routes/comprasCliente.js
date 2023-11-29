@@ -16,17 +16,12 @@ route.post("/", async (req,res) => {
 route.get("/", async (req,res) => {
     var { id_cliente } = req.body
 
-    if (id_cliente == undefined)
+    if (!id_cliente)
         return res.send({ error: "Id do cliente não pode ser nulo"})
 
-    try {
-        var data = await Compras.find({ id_cliente: id_cliente });
-        
-        return res.send( data );
-    }  
-    catch( err ) {
-        return res.send({ error: "Id não encontrado" })
-    }    
+    var data = await Compras.find({id_cliente});
+    
+    return res.send( data );   
 })
 
 /************************************************************************************************************* */
